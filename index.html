@@ -1,24 +1,255 @@
-<!DOCTYPE html>
-<html>
 <head>
-<meta charset="UTF-8">
-<title>Fruit Crush</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-
-	<link rel="manifest" href="appmanifest.json">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
-	<link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
-	<link rel="icon" type="image/png" href="icons/icon-256.png">
-
-<link rel="stylesheet" href="style.css">
-
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        #win,
+        #lose,
+        #EasyLevelQuestion2,
+        #EasyLevelQuestion3,
+        #EasyLevelQuestion4,
+        #MediumLevelQuestion1,
+        #MediumLevelQuestion2,
+        #MediumLevelQuestion3,
+        #meme1,
+        #meme2,
+        #meme3,
+        #meme4 {
+            display: none;
+        }
+    </style>
 </head>
-<body>
-<div id="fb-root"></div>
 
-	<script src="c2runtime.js"></script>
-	<script src="start.js"></script>
-	<script src="register-sw.js"></script>
+<body>
+    <div class="container-fluid">
+
+        <div class="row" id="EasyLevelQuestion1">
+            <div class="col-sm-12 col-xs-12"> <img src="https://img.alicdn.com/tfs/TB1.w1fzHH1gK0jSZFwXXc7aXXa-718-199.png" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL1A1"><img src="https://img.alicdn.com/tfs/TB1ReB.zLb2gK0jSZK9XXaEgFXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL1A2"><img src="https://img.alicdn.com/tfs/TB1SCCbzQY2gK0jSZFgXXc5OFXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL1A3"><img src="https://img.alicdn.com/tfs/TB15kWXzUT1gK0jSZFrXXcNCXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL1A4"><img src="https://img.alicdn.com/tfs/TB1Ai1XzRv0gK0jSZKbXXbK2FXa-718-200.png" class="img-responsive"></a>
+            </div>
+            
+        </div>
+
+        <div class="row" id="EasyLevelQuestion2">
+            <div class="col-sm-12 col-xs-12"> <img src="https://img.alicdn.com/tfs/TB1QmKfzQT2gK0jSZPcXXcKkpXa-718-199.png" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL2A1"><img src="https://img.alicdn.com/tfs/TB1SoeazHr1gK0jSZR0XXbP8XXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL2A2"><img src="https://img.alicdn.com/tfs/TB1DHafzQT2gK0jSZFkXXcIQFXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL2A3"><img src="https://img.alicdn.com/tfs/TB1FuuezUY1gK0jSZFCXXcwqXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL2A4"><img src="https://img.alicdn.com/tfs/TB1a5CXzKL2gK0jSZPhXXahvXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            
+        </div>
+
+        <div class="row" id="EasyLevelQuestion3">
+            <div class="col-sm-12 col-xs-12"> <img src="https://img.alicdn.com/tfs/TB1719fzNv1gK0jSZFFXXb0sXXa-718-199.png" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL3A1"><img src="https://img.alicdn.com/tfs/TB1jyyazNn1gK0jSZKPXXXvUXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL3A2"><img src="https://img.alicdn.com/tfs/TB1WASXzND1gK0jSZFsXXbldVXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL3A3"><img src="https://img.alicdn.com/tfs/TB11iyazNn1gK0jSZKPXXXvUXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL3A4"><img src="https://img.alicdn.com/tfs/TB1t9KbzUT1gK0jSZFhXXaAtVXa-718-200.png" class="img-responsive"></a>
+            </div>
+            
+        </div>
+
+        <div class="row" id="EasyLevelQuestion4">
+            <div class="col-sm-12 col-xs-12"> <img src="https://img.alicdn.com/tfs/TB1HXCczUT1gK0jSZFrXXcNCXXa-718-197.png" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL4A1"><img src="https://img.alicdn.com/tfs/TB1pdGezQT2gK0jSZPcXXcKkpXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL4A2"><img src="https://img.alicdn.com/tfs/TB19Bh.zFY7gK0jSZKzXXaikpXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL4A3"><img src="https://img.alicdn.com/tfs/TB1YKuezUY1gK0jSZFCXXcwqXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="EL4A4"><img src="https://img.alicdn.com/tfs/TB1881dzNv1gK0jSZFFXXb0sXXa-718-200.png" class="img-responsive"></a>
+            </div>
+        </div>
+
+        <div class="row" id="MediumLevelQuestion1">
+            <div class="col-sm-12 col-xs-12"> <img src="https://img.alicdn.com/tfs/TB1txSbzFP7gK0jSZFjXXc5aXXa-718-199.png" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML1A1"><img src="https://img.alicdn.com/tfs/TB1x5yazNn1gK0jSZKPXXXvUXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML1A2"><img src="https://img.alicdn.com/tfs/TB117rsbsKfxu4jSZPfXXb3dXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML1A3"><img src="https://img.alicdn.com/tfs/TB1kZiXzKT2gK0jSZFvXXXnFXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML1A4"><img src="https://img.alicdn.com/tfs/TB195ifzKH2gK0jSZJnXXaT1FXa-718-200.png" class="img-responsive"></a>
+            </div>
+        </div>
+
+        <div class="row" id="MediumLevelQuestion2">
+            <div class="col-sm-12 col-xs-12"> <img src="https://img.alicdn.com/tfs/TB1HriezQY2gK0jSZFgXXc5OFXa-718-199.png" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML2A1"><img src="https://img.alicdn.com/tfs/TB1mIiXzKT2gK0jSZFvXXXnFXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML2A2"><img src="https://img.alicdn.com/tfs/TB1tZiXzKT2gK0jSZFvXXXnFXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML2A3"><img src="https://img.alicdn.com/tfs/TB1iQmezND1gK0jSZFyXXciOVXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML2A4"><img src="https://img.alicdn.com/tfs/TB1a_WdzHH1gK0jSZFwXXc7aXXa-718-200.png" class="img-responsive"></a>
+            </div>
+        </div>
+
+
+
+        <div class="row" id="MediumLevelQuestion3">
+            <div class="col-sm-12 col-xs-12"> <img src="https://img.alicdn.com/tfs/TB15yadzKH2gK0jSZFEXXcqMpXa-718-199.png" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML3A1"><img src="https://img.alicdn.com/tfs/TB1WTSdzHH1gK0jSZFwXXc7aXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML3A2"><img src="https://img.alicdn.com/tfs/TB1RROazQP2gK0jSZPxXXacQpXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML3A3"><img src="https://img.alicdn.com/tfs/TB11OCXzKL2gK0jSZPhXXahvXXa-718-200.png" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <a id="ML3A4"><img src="https://img.alicdn.com/tfs/TB1o5GezHj1gK0jSZFOXXc7GpXa-718-200.png" class="img-responsive"></a>
+            </div>
+        </div>
+
+
+
+        <div class="row" id="meme1">
+            <div class="col-sm-12 col-xs-12"> <img src="https://img.alicdn.com/tfs/TB1h4uezKH2gK0jSZJnXXaT1FXa-718-715.png" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12">
+				<iframe src="https://www.daraz.com.bd/wow/camp/daraz/megascenario/bd/cp-campaign/meme-quiz-form?hybrid=1" title="Which meme suits your personality!" width="100%" height="560" frameborder="0"></iframe>
+          </div>
+        </div>
+
+        <div class="row" id="meme2">
+            <div class="col-sm-12 col-xs-12"> <img src="https://img.alicdn.com/tfs/TB1FxCezKH2gK0jSZJnXXaT1FXa-718-715.png" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12">
+				<iframe src="https://www.daraz.com.bd/wow/camp/daraz/megascenario/bd/cp-campaign/meme-quiz-form?hybrid=1" title="Which meme suits your personality!" width="100%" height="560" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="row" id="meme3">
+            <div class="col-sm-12 col-xs-12"> <img src="https://img.alicdn.com/tfs/TB1XxV.zKL2gK0jSZPhXXahvXXa-718-715.png" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12">
+				<iframe src="https://www.daraz.com.bd/wow/camp/daraz/megascenario/bd/cp-campaign/meme-quiz-form?hybrid=1" title="Which meme suits your personality!" width="100%" height="560" frameborder="0"></iframe>
+           </div>
+        </div>
+
+        <div class="row" id="meme4">
+            <div class="col-sm-12 col-xs-12"> <img src="https://img.alicdn.com/tfs/TB1q45dzHj1gK0jSZFOXXc7GpXa-718-715.png" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12">
+				<iframe src="https://www.daraz.com.bd/wow/camp/daraz/megascenario/bd/cp-campaign/meme-quiz-form?hybrid=1" title="Which meme suits your personality!" width="100%" height="560" frameborder="0"></iframe>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="row" id="win">
+            <div class="col-sm-12 col-xs-12">
+                <a href="https://www.daraz.com.bd/wow/camp/daraz/megascenario/bd/cp-campaign/entertainment-zone?hybrid=1"><img src="https://img.alicdn.com/tfs/TB1vHOniQL0gK0jSZFxXXXWHVXa-718-1219.jpg" class="img-responsive"></a>
+            </div>
+        </div>
+        <div class="row" id="lose">
+            <div class="col-sm-12 col-xs-12">
+                <a href="https://www.daraz.com.bd/wow/camp/daraz/megascenario/bd/bny/meme-quiz?hybrid=1"><img src="https://img.alicdn.com/tfs/TB1OwmkiKL2gK0jSZPhXXahvXXa-718-1219.jpg" class="img-responsive"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript"> 
+
+    	$(document).ready(function() {
+
+		$("#EL1A1, #EL1A2, #EL1A3, #EL1A4").click(function() {
+			$("#EasyLevelQuestion1").hide();
+			$("#EasyLevelQuestion2").css("display", "block");
+		});
+
+		$("#EL2A1, #EL2A2, #EL2A3, #EL2A4").click(function() {
+			$("#EasyLevelQuestion2").hide();
+			$("#EasyLevelQuestion3").css("display", "block");
+		});
+
+		$("#EL3A1, #EL3A2, #EL3A3, #EL3A4").click(function() {
+			$("#EasyLevelQuestion3").hide();
+			$("#EasyLevelQuestion4").css("display", "block");
+		});
+
+		$("#EL4A1, #EL4A2, #EL4A3, #EL4A4").click(function() {
+			$("#EasyLevelQuestion4").hide();
+			$("#MediumLevelQuestion1").css("display", "block");
+		});
+
+		$("#ML1A1, #ML1A2, #ML1A3, #ML1A4").click(function() {
+			$("#MediumLevelQuestion1").hide();
+			$("#MediumLevelQuestion2").css("display", "block");
+		});
+
+		$("#ML2A1, #ML2A2, #ML2A3, #ML2A4").click(function() {
+			$("#MediumLevelQuestion2").hide();
+			$("#MediumLevelQuestion3").css("display", "block");
+		});
+
+		$("#ML3A1").click(function() {
+			$("#MediumLevelQuestion3").hide();
+			$("#meme1").css("display", "block");
+		});
+
+
+		$("#ML3A2").click(function() {
+			$("#MediumLevelQuestion3").hide();
+			$("#meme2").css("display", "block");
+		});
+
+
+		$("#ML3A3").click(function() {
+			$("#MediumLevelQuestion3").hide();
+			$("#meme3").css("display", "block");
+		});
+
+		$("#ML3A4").click(function() {
+			$("#MediumLevelQuestion3").hide();
+			$("#meme4").css("display", "block");
+		});						
+
+}); 
+
+</script>
+
 </body>
-</html>
